@@ -24,6 +24,8 @@ Install all Puppet modules with Puppet Librarian
 Start all the vms with Vagrant
 
     vagrant up  (or vagrant up web01 ; vagrant up web02; vagrant up haproxy)
+    
+( Notes: If you find some services don't run properly, run `vagrant provision BOXNAME` again, it will fix this issue)
 
 Test the load balancer from your favorite web browser
 
