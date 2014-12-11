@@ -16,6 +16,10 @@ Install all required gems
 Install all Puppet modules with Puppet Librarian
 
     librarian-puppet install
+    
+    you can ignore below error message:
+    Invalid module name 'apache', you should qualify it with 'ORGANIZATION-apache' for resolution to work correctly
+    Invalid module name 'haproxy', you should qualify it with 'ORGANIZATION-haproxy' for resolution to work correctly
 
 Start all the vms with Vagrant
 
