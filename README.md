@@ -48,12 +48,12 @@ add more boxes in Vagrantfile
 
 ```
   config.vm.define :web03 do |config|
-     config.vm.host_name = "web01.example.com"
+     config.vm.host_name = "web03.example.com"
      config.vm.network :private_network, ip: "192.168.50.56"
   end
 
   config.vm.define :web04 do |config|
-     config.vm.host_name = "web02.example.com"
+     config.vm.host_name = "web03.example.com"
      config.vm.network :private_network, ip: "192.168.50.58"
   end
   ```
