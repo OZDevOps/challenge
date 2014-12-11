@@ -58,7 +58,7 @@ add more boxes in Vagrantfile
   end
   ```
   
-run `librarian-puppet install` to get updated modules.
+No need run  `librarian-puppet install` this time. Because there is no change in puppet modues.
  
 start new web servers and provision haproxy server.
 
