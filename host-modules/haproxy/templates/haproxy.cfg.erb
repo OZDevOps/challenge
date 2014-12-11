@@ -22,5 +22,6 @@ listen stats :8080
 	stats auth haproxy:topsecret
 listen myapp 0.0.0.0:80
 	balance leastconn
-	server myapp1 192.168.50.50:80 check maxconn 100
-	server myapp2 192.168.50.52:80 check maxconn 100
+        <% @webserver.each do |web| -%>
+        server <%= web %> <%= web %>:80 check maxconn 100
+        <% end -%>

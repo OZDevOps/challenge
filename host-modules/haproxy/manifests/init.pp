@@ -15,7 +15,7 @@ class haproxy {
   }
 
   file { '/etc/haproxy/haproxy.cfg':
-    source => 'puppet:///modules/haproxy/haproxy.cfg',
+    content => template('haproxy/haproxy.cfg.erb'),
     require => Package['haproxy'],
     notify => Service['haproxy'],
   }

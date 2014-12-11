@@ -5,10 +5,6 @@ class basenode {
     ensure => file,
   }
 
-  file { '/etc/puppet/puppet.conf':
-    ensure => file,
-    source => 'puppet:///modules/haproxy/puppet.conf',
-  }
 }
 
 node /^web\d{2}.example.com$/ {
@@ -18,5 +14,6 @@ node /^web\d{2}.example.com$/ {
 
 node 'haproxy.example.com' {
   include basenode
+  $webserver = ['192.168.50.50','192.168.50.52', '192.168.50.56', '192.168.50.58']
   include haproxy
 }

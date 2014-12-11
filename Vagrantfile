@@ -50,4 +50,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      config.vm.network :private_network, ip: "192.168.50.54"
   end
 
+  config.vm.define :web03 do |config|
+     config.vm.host_name = "web03.example.com"
+     config.vm.network :private_network, ip: "192.168.50.56"
+  end
+
+  config.vm.define :web04 do |config|
+     config.vm.host_name = "web03.example.com"
+     config.vm.network :private_network, ip: "192.168.50.58"
+  end
+
 end
