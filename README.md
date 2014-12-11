@@ -33,7 +33,7 @@ Test the load balancer from your favorite web browser
     
 Keep refresh, you should see the server name keep changing between web01.example.com and web02.example.com
 
-### If you need add more webservers under haproxy, 
+### If you need add more webservers under haproxy, for example, add two more web servers.
 
 edit `manifests/vagrant.pp` file:
 
