@@ -35,16 +35,18 @@ Keep refresh, you should see the server name keep changing between web01.example
 
 ### If you need add more webservers under haproxy, for example, add two more web servers.
 
-edit `manifests/vagrant.pp` file:
+edit `manifests/vagrant.pp` file, you can add more IPs, or remove some IPs.
 
 ```
+switch 
+
 $webserver = ['192.168.50.50','192.168.50.52']
-  
-to 
-  
+
+to
+
 $webserver = ['192.168.50.50','192.168.50.52', '192.168.50.56', '192.168.50.58']
 ```
-add more boxes in Vagrantfile
+add more boxes in Vagrantfile 
 
 ```
   config.vm.define :web03 do |config|
