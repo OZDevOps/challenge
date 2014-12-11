@@ -1,4 +1,4 @@
-## Installation on OSX
+### Installation on OSX
 
 Install Vagrant and librarian-puppet
 
@@ -33,3 +33,41 @@ Test the load balancer from your favorite web browser
     
 Keep refresh, you should see the server name keep changing between web01.example.com and web02.example.com
 
+### If you need add more webservers under haproxy, 
+
+edit `manifests/vagrant.pp` file:
+
+```
+$webserver = ['192.168.50.50','192.168.50.52']
+  
+to 
+  
+$webserver = ['192.168.50.50','192.168.50.52', '192.168.50.56', '192.168.50.58']
+```
+add more boxes in Vagrantfile
+
+```
+  config.vm.define :web03 do |config|
+     config.vm.host_name = "web01.example.com"
+     config.vm.network :private_network, ip: "192.168.50.56"
+  end
+
+  config.vm.define :web04 do |config|
+     config.vm.host_name = "web02.example.com"
+     config.vm.network :private_network, ip: "192.168.50.58"
+  end
+  ```
+  
+run `librarian-puppet install` to get updated modules.
+ 
+start new web servers and provision haproxy server.
+
+    vagrant up web03; vagrant up web04; vagrant provision haproxy
+
+Then you should see four webservers in haproxy server control 
+
+```
+http://192.168.50.54:8080
+username: haproxy
+password: topsecret
+```
