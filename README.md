@@ -1,9 +1,10 @@
 ### Installation on OSX
 
-Install Vagrant and librarian-puppet
+Install Vagrant, librarian-puppet and bundler.
 
-    include Vagrant (http://vagrantup.com) 
-    include librarian-puppet (http://librarian-puppet.com/) 
+    Vagrant (http://vagrantup.com) 
+    librarian-puppet (http://librarian-puppet.com/) 
+    bundler (http://bundler.io/)
     
 Clone the git repository to local disk 
 
