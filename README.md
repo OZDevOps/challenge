@@ -60,7 +60,7 @@ add more boxes in Vagrantfile
   end
   ```
   
-No need run  `librarian-puppet install` this time. Because there is no change in puppet modues.
+No need run  `librarian-puppet install` this time. Because there is no change in puppet modules.
  
 start new web servers and provision haproxy server.
 
