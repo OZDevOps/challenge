@@ -10,7 +10,7 @@ Install Vagrant, librarian-puppet and bundler.
     
 Clone the git repository to local disk 
 
-    git clone https://github.com/SydOps/challenge.git
+    git clone https://github.com/OZDevOps/challenge.git
     
 Install all required gems
 
